@@ -1,101 +1,157 @@
 import Image from "next/image";
+import {Poppins} from "next/font/google";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import icon from "../app/images/down-icon.png";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import first from "../app/images/feature-1.png";
+import second from "../app/images/feature-2.png";
+import third from "../app/images/feature-3.png";
+import fourth from "../app/images/feature-4.png";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <div className="body">
+        <div className="header">
+          <div className="logo"></div>
+          <div className="buttons">
+            <div className="language"><FontAwesomeIcon icon={faGlobe}/> English <Image src={icon} alt="" width={14} height={14}/></div>
+            <div className="sign">Sign in</div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="hero-sec">
+          <div className="box">
+            <h1>Unlimited movies, TV </h1>
+            <h1>shows and more</h1>
+            <h2>Watch anywhere. Cancel anytime</h2>
+            <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+            <div className="email">
+              <input type="text" className="enter" placeholder="Email address" />
+              <button className="start">Get started <FontAwesomeIcon icon = {faChevronRight} /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="first">
+        <div className="text">
+          <h1>Enjoy on your TV.</h1>
+          <p>Watch on smart TVs, PLayStation, Xbox,</p>
+          <p>Chromecast, Apple TV, Blu-ray players and</p>
+          <p>more.</p>
+        </div>
+        <div className="image">
+          <Image src={first} alt="" width={900} height={900}/>
+        </div>
+      </section>
+      <section className="second">
+        <div className="image">
+          <Image src={second} alt="" width={900} height={900}/>
+        </div>
+        <div className="text">
+          <h1>Download your shows <br />to watch offline</h1>
+          {/* <h1>to watch offline</h1> */}
+          <p>Save your favorites easily and alwasy have</p>
+          <p>something to watch</p>
+        </div>
+      </section>
+      <section className="third">
+        <div className="text">
+          <h1>Watch everywhere</h1>
+          <p>Stream unlimited movies and TV shows on your <br />phone, tablet, laptop and TV.</p>
+        </div>
+        <div className="image">
+          <Image src={third} alt="" width={900} height={900}/>
+        </div>
+      </section>
+      <section className="fourth">
+      <div className="image">
+          <Image src={fourth} alt="" width={900} height={900}/>
+        </div>
+      <div className="text">
+          <h1>Create profiles for <br />children</h1>
+          <p>Send children on adventures with their favorite characters in a space made just for them-free with your membership.</p>
+        </div>
+      </section>
+      <section className="frequent">
+      <h2>Frequently Ask Questions</h2>
+      <ul className="faqs">
+        <li>
+          <input type="radio" name="accordion" id="first"/>
+          <label className="faq" htmlFor="first">What is Netflix?</label>
+          <div className="ans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ullam pariatur, minima consequuntur deserunt sequi voluptates ratione debitis magni accusantium doloremque laudantium animi quisquam labore magnam officia dignissimos! Itaque, sequi.</div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="second"/>
+          <label className="faq" htmlFor="second">How much does Netflix cost?</label>
+          <div className="ans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ullam pariatur, minima consequuntur deserunt sequi voluptates ratione debitis magni accusantium doloremque laudantium animi quisquam labore magnam officia dignissimos! Itaque, sequi.</div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="third"/>
+          <label className="faq" htmlFor="third">Where can I watch?</label>
+          <div className="ans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ullam pariatur, minima consequuntur deserunt sequi voluptates ratione debitis magni accusantium doloremque laudantium animi quisquam labore magnam officia dignissimos! Itaque, sequi.</div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fourth"/>
+          <label className="faq" htmlFor="fourth">How do I cancel?</label>
+          <div className="ans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ullam pariatur, minima consequuntur deserunt sequi voluptates ratione debitis magni accusantium doloremque laudantium animi quisquam labore magnam officia dignissimos! Itaque, sequi.</div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="fifth"/>
+          <label className="faq" htmlFor="fifth">What can I watch on Netflix?</label>
+          <div className="ans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ullam pariatur, minima consequuntur deserunt sequi voluptates ratione debitis magni accusantium doloremque laudantium animi quisquam labore magnam officia dignissimos! Itaque, sequi.</div>
+        </li>
+        <li>
+          <input type="radio" name="accordion" id="sixth"/>
+          <label className="faq" htmlFor="sixth">Is Netflix good for kids?</label>
+          <div className="ans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ullam pariatur, minima consequuntur deserunt sequi voluptates ratione debitis magni accusantium doloremque laudantium animi quisquam labore magnam officia dignissimos! Itaque, sequi.</div>
+        </li>
+      </ul>
+      </section>
+      <section className="bottom">
+        <div>
+        <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+            <div className="email">
+              <input type="text" className="enter" placeholder="Email address" />
+              <button className="start">Get started <FontAwesomeIcon icon = {faChevronRight} /></button>
+            </div>
+          <h4>Email is required</h4>
+        </div>
+      </section>
+      <section className="footer">
+        <div className="one">Questions? Call 000-800-919-1694</div>
+        <div className="two">
+          <ul className="col">
+            <li>FAQ</li>
+            <li>Investor Relations</li>
+            <li>Privacy</li>
+            <li>Speed Test</li>
+          </ul>
+          <ul className="col">
+            <li>Help Centre</li>
+            <li>Jobs</li>
+            <li>Cookie Preferences</li>
+            <li>Legal Notices</li>
+          </ul>
+          <ul className="col">
+            <li>Account</li>
+            <li>Ways to Watch</li>
+            <li>Corporate Information</li>
+            <li>Only on Netflix</li>
+          </ul>
+          <ul className="col">
+            <li>Media Centre</li>
+            <li>Terms of Use</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div className="three">
+        <div className="language"><FontAwesomeIcon icon={faGlobe}/> English <Image src={icon} alt="" width={14} height={14}/></div>
+        <h1>Netflix</h1>
+        </div>
+      </section>
     </div>
   );
 }
