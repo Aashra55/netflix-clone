@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {Poppins} from "next/font/google";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
@@ -9,7 +8,6 @@ import first from "../app/images/feature-1.png";
 import second from "../app/images/feature-2.png";
 import third from "../app/images/feature-3.png";
 import fourth from "../app/images/feature-4.png";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
